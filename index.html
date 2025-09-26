@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Form</title>
+</head>
+<body>
+    <h2>Contact Form</h2>
+    <form action="/submit-form" method="post">
+       
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+       
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+       
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        
+        <label>Interests:</label><br>
+        <input type="checkbox" id="coding" name="interests" value="Coding">
+        <label for="coding">Coding</label><br>
+        <input type="checkbox" id="music" name="interests" value="Music">
+        <label for="music">Music</label><br><br>
+
+        
+        <label for="country">Country:</label><br>
+        <select id="country" name="country">
+            <option value="usa">Pakistan</option>
+            <option value="uk">UK</option>
+            <option value="india">US</option>
+        </select><br><br>
+
+        
+        <input type="submit" value="Submit">
+        <table border="1" cellpading="10" cellspacing="0">
+            <caption>Student Table Sample</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Arshad Ali</td>
+                    <td>Developer</td>
+                    <td>ali@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Muhammad Hasnain</td>
+                    <td>Developer</td>
+                    <td>mhasnain@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Waqas Khan</td>
+                    <td>Designer</td>
+                    <td>wiqi@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    
+</body>
+</html>
