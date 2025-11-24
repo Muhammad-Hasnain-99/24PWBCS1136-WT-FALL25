@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selectors Demonstration</title>
+<link rel="stylesheet" href="./task 01.css">
+</head>
+<body>
+
+<h1 id="main-title">CSS Selectors Demonstration</h1>
+
+<h2>Basic Selectors</h2>
+<p class="highlight">This paragraph uses a class selector to highlight the background and add a border.</p>
+
+<h3>Attribute Selectors</h3>
+<p data-role="note">This paragraph is styled using an attribute selector (data-role="note").</p>
+<input type="text" placeholder="Type your name here">
+<br><br>
+<a href="https://example.com">Visit Example Website</a>
+
+<div>
+  <h2>Combinator Selectors</h2>
+  <p>This paragraph is inside a div (descendant selector).</p>
+  <span>This span is a direct child of div (child selector).</span>
+  <p>Another paragraph inside div.</p>
+</div>
+
+<h3>Sibling Selectors</h3>
+<p>This paragraph appears immediately after the h3 (adjacent sibling selector).</p>
+
+<ul>
+  <li>First item (first-child)</li>
+  <li>Second item</li>
+  <li>Third item (nth-child)</li>
+  <li>Last item (last-child)</li>
+</ul>
+
+</body>
+</html>

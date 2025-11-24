@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Positioning Challenge</title>
+<style>
+body{margin:0;font-family:Arial}
+header{position:fixed;top:0;left:0;right:0;background:#333;color:#fff;padding:1rem;z-index:1000}
+@media(max-width:767px){header{position:static}}
+.main{margin-top:80px;display:flex;gap:1rem;padding:1rem}
+.sidebar{position:sticky;top:1rem;background:#eee;padding:1rem;height:200px}
+.modal{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;padding:2rem;border:1px solid #ccc;z-index:2000}
+@media(max-width:767px){
+.modal{position:fixed;top:0;left:0;right:0;bottom:0;margin:auto;width:90%;height:90%;overflow:auto}
+}
+.box1,.box2{width:100px;height:100px;position:relative}
+.box1{background:red;z-index:1}
+.box2{background:blue;margin-left:-50px;z-index:2}
+</style></head><body>
+<header>Fixed Header</header>
+<div class="main">
+  <aside class="sidebar">Sticky Sidebar</aside>
+  <section>
+    <div class="box1"></div><div class="box2"></div>
+    <div class="modal">Modal Dialog</div>
+  </section>
+</div>
+</body></html>

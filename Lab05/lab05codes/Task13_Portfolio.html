@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portfolio</title>
+<style>
+body{margin:0;font-family:Arial}
+.page{display:grid;grid-template-areas:"header header" "gallery sidebar";grid-template-columns:3fr 1fr;gap:1rem;padding:1rem}
+header{grid-area:header;background:#222;color:#fff;padding:1rem}
+.gallery{grid-area:gallery;display:flex;flex-wrap:wrap;gap:1rem}
+.gallery img{width:calc(33% - 1rem)}
+.sidebar{grid-area:sidebar;background:#eee;padding:1rem}
+@media(max-width:768px){.page{grid-template-areas:"header" "gallery" "sidebar";grid-template-columns:1fr}.gallery img{width:100%}}
+</style></head><body>
+<div class="page">
+<header><h1>My Portfolio</h1></header>
+<div class="gallery">
+<img src="https://picsum.photos/300/200?1"><img src="https://picsum.photos/300/200?2"><img src="https://picsum.photos/300/200?3">
+</div>
+<aside class="sidebar">About Me</aside>
+</div>
+</body></html>

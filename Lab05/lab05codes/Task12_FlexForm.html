@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Responsive Form</title>
+<style>
+body{font-family:Arial;padding:1rem}
+form{display:flex;flex-wrap:wrap;gap:1rem}
+form div{flex:1 1 300px;display:flex;flex-direction:column}
+@media(max-width:600px){form{flex-direction:column}}
+</style></head><body>
+<form>
+<div><label>Name</label><input type="text"></div>
+<div><label>Email</label><input type="email"></div>
+<div><label>Message</label><textarea></textarea></div>
+<button>Submit</button>
+</form>
+</body></html>

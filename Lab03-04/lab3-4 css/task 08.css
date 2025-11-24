@@ -1,0 +1,162 @@
+/* ===============================
+   NAVIGATION MENU STYLING
+   =============================== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f9fb;
+}
+
+/* ===============================
+   NAVBAR BASE STYLES
+   =============================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0077b6;
+  color: white;
+  padding: 15px 40px;
+  position: relative;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ===============================
+   NAV LINKS (HORIZONTAL)
+   =============================== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+/* Hover and Active States */
+.nav-links a:hover {
+  background-color: #00b4d8;
+  transform: translateY(-2px);
+}
+
+.nav-links a.active {
+  background-color: #023e8a;
+}
+
+/* ===============================
+   DROPDOWN MENU STYLING
+   =============================== */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  border-radius: 5px;
+  overflow: hidden;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+}
+
+.dropdown-content li a {
+  color: #0077b6;
+  padding: 10px 15px;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+  color: #023e8a;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    background-color: #0077b6;
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    transition: all 0.4s ease;
+  }
+
+  .nav-links.show {
+    left: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: #0096c7;
+  }
+
+  .dropdown-content li a {
+    color: white;
+  }
+
+  .dropdown-content li a:hover {
+    background-color: #00b4d8;
+  }
+}
+
+/* ===============================
+   CONTENT SECTION
+   =============================== */
+.content {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.content h1 {
+  color: #023e8a;
+  margin-bottom: 15px;
+}
+
+/* ===============================
+   TRANSITIONS AND ANIMATIONS
+   =============================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

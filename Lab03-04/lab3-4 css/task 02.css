@@ -1,0 +1,108 @@
+/* ===============================
+   BACKGROUND DEMONSTRATION STYLES
+   =============================== */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  background-color: #004466;
+  color: white;
+  padding: 20px 0;
+  margin: 0;
+}
+
+section {
+  padding: 40px;
+  margin: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 1. Solid Color Background */
+.solid-bg {
+  background-color: #a8dadc;
+  color: #1d3557;
+}
+
+/* 2. Image Backgrounds with Repeat Patterns */
+.image-bg div {
+  width: 100%;
+  height: 150px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Example background image (replace with your own URL if needed) */
+.image-bg div {
+  background-image: url('https://www.w3schools.com/css/img_lights.jpg');
+  background-size: 200px;
+}
+
+.bg-repeat { background-repeat: repeat; }
+.bg-repeat-x { background-repeat: repeat-x; }
+.bg-repeat-y { background-repeat: repeat-y; }
+.bg-no-repeat { background-repeat: no-repeat; background-position: center; background-size: cover; }
+
+/* 3. Linear and Radial Gradients */
+.gradient-bg div {
+  width: 100%;
+  height: 150px;
+  margin: 10px 0;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.linear-gradient {
+  background: linear-gradient(90deg, #ff6b6b, #feca57, #1dd3b0);
+}
+
+.radial-gradient {
+  background: radial-gradient(circle, #457b9d, #1d3557);
+}
+
+/* 4. Multiple Background Layers */
+.multi-bg {
+  background-image: url('https://www.w3schools.com/css/img_mountains.jpg'),
+                    linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  background-blend-mode: normal;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+/* 5. Background Blend Modes */
+.blend-bg {
+  background-image: url('https://www.w3schools.com/css/img_forest.jpg'),
+                    linear-gradient(to bottom, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #004466;
+  color: white;
+  margin-top: 40px;
+  font-size: 14px;
+}

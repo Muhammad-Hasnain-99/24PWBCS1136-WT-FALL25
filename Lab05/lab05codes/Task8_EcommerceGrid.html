@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>E-commerce Grid</title>
+<style>
+body{font-family:Arial;margin:0}
+.wrapper{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{background:#f4f4f4;padding:1rem}
+.products{display:grid;gap:1rem;padding:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{border:1px solid #ccc;padding:1rem;text-align:center}
+.card img{width:100%;height:auto}
+@media(max-width:767px){
+.wrapper{grid-template-columns:1fr}
+.sidebar{position:fixed;top:0;left:-260px;width:250px;height:100%;transition:.3s;background:#fff;z-index:10}
+.sidebar.show{left:0}
+.toggle{display:block;margin:1rem}
+}
+.toggle{display:none}
+</style></head><body>
+<button class="toggle" onclick="document.querySelector('.sidebar').classList.toggle('show')">☰ Filters</button>
+<div class="wrapper">
+<aside class="sidebar"><h3>Filters</h3><p>Price, Category</p></aside>
+<main class="products">
+<div class="card"><img src="https://picsum.photos/220"><h4>Product 1</h4><p>$25</p></div>
+<div class="card"><img src="https://picsum.photos/221"><h4>Product 2</h4><p>$30</p></div>
+<div class="card"><img src="https://picsum.photos/222"><h4>Product 3</h4><p>$20</p></div>
+<div class="card"><img src="https://picsum.photos/223"><h4>Product 4</h4><p>$35</p></div>
+</main>
+</div>
+</body></html>

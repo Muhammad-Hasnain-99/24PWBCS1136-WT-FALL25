@@ -1,0 +1,165 @@
+/* ======================================
+   CSS TRANSFORM SHOWCASE
+   ====================================== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #0077b6, #00b4d8, #90e0ef);
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+header p {
+  color: #e0f7fa;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* TRANSFORM GALLERY GRID */
+.transform-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+/* CARD STYLES */
+.card {
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card h3 {
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* COMMON BOX STYLE */
+.box, .origin-box, .combo-box {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #0077b6, #00b4d8);
+  margin: 0 auto;
+  border-radius: 10px;
+  transition: all 0.6s ease;
+}
+
+/* ROTATION */
+.rotate .box:hover {
+  transform: rotate(45deg);
+}
+
+/* SCALING */
+.scale .box:hover {
+  transform: scale(1.5);
+}
+
+/* TRANSLATION */
+.translate .box:hover {
+  transform: translateX(60px);
+}
+
+/* 3D TRANSFORM (CUBE EFFECT) */
+.cube {
+  perspective: 600px;
+}
+
+.cube-box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.cube-box:hover {
+  transform: rotateY(180deg);
+}
+
+.cube-face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  backface-visibility: hidden;
+}
+
+.cube-face.front {
+  background: #00b4d8;
+}
+
+.cube-face.back {
+  background: #023e8a;
+  transform: rotateY(180deg);
+}
+
+/* TRANSFORM ORIGIN */
+.origin .origin-box {
+  transform-origin: top left;
+}
+
+.origin .origin-box:hover {
+  transform: rotate(45deg);
+  background: linear-gradient(45deg, #48cae4, #0096c7);
+}
+
+/* COMBINED TRANSFORM */
+.combo .combo-box:hover {
+  transform: rotate(30deg) scale(1.2) translateX(40px);
+  background: linear-gradient(45deg, #ffba08, #faa307);
+}
+
+/* FOOTER */
+footer {
+  background: #023e8a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .box, .origin-box, .combo-box {
+    width: 80px;
+    height: 80px;
+  }
+}

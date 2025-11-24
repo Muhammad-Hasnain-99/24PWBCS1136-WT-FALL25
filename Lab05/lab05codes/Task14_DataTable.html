@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Responsive Table</title>
+<style>
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #ccc;padding:.5rem;text-align:left}
+@media(max-width:600px){
+table,thead,tbody,tr,th,td{display:block;width:100%}
+thead{display:none}
+td{border:none;border-bottom:1px solid #eee}
+td::before{content:attr(data-label);font-weight:bold;display:block}
+}
+</style></head><body>
+<table>
+<thead><tr><th>Name</th><th>Email</th><th>Role</th></tr></thead>
+<tbody>
+<tr><td data-label="Name">Ali</td><td data-label="Email">ali@mail.com</td><td data-label="Role">Admin</td></tr>
+<tr><td data-label="Name">Sara</td><td data-label="Email">sara@mail.com</td><td data-label="Role">User</td></tr>
+</tbody>
+</table>
+</body></html>

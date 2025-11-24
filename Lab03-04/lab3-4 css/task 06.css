@@ -1,0 +1,131 @@
+/* ==================================
+   REGISTRATION FORM STYLING
+   ================================== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #0077b6, #90e0ef);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #023e8a;
+  margin-bottom: 5px;
+}
+
+p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* ===============================
+   INPUT FIELD STYLING
+   =============================== */
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+/* Focus State */
+input:focus, select:focus {
+  border-color: #0077b6;
+  background-color: #e0f7fa;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0,119,182,0.5);
+}
+
+/* ===============================
+   BUTTON STYLING
+   =============================== */
+.btn-submit {
+  width: 100%;
+  background: linear-gradient(45deg, #0077b6, #00b4d8);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  transform: translateY(-2px);
+}
+
+.btn-submit:focus {
+  outline: 3px solid #90e0ef;
+}
+
+/* ===============================
+   ERROR STATE STYLING
+   =============================== */
+.error-msg {
+  color: #d90429;
+  font-size: 13px;
+  display: none;
+  margin-top: 5px;
+}
+
+/* Add red border for invalid input (optional) */
+input:invalid {
+  border-color: #d90429;
+}
+
+/* ===============================
+   SUCCESS MESSAGE
+   =============================== */
+.success-msg {
+  background-color: #2a9d8f;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: none;
+  margin-top: 15px;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+@media (max-width: 480px) {
+  .form-container {
+    width: 90%;
+    padding: 25px;
+  }
+}

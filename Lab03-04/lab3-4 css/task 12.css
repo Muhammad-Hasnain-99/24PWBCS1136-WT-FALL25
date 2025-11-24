@@ -1,0 +1,148 @@
+/* ======================================
+   LAB 02 COURSE SCHEDULE STYLING
+   ====================================== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f9fb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(45deg, #0077b6, #00b4d8);
+  color: white;
+  padding: 40px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.table-container {
+  padding: 40px 20px;
+  overflow-x: auto; /* Enables horizontal scroll for small screens */
+}
+
+/* ==============================
+   TABLE BASE STYLES
+   ============================== */
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.course-table th,
+.course-table td {
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Zebra Striping */
+.course-table tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+/* Hover Effect */
+.course-table tbody tr:hover {
+  background-color: #caf0f8;
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+/* Header Styling */
+.course-table thead {
+  background-color: #023e8a;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.course-table th {
+  border-bottom: 3px solid #0077b6;
+}
+
+/* ==============================
+   COLOR-CODED COURSE TYPES
+   ============================== */
+.lecture td:nth-child(3) {
+  color: #0077b6;
+  font-weight: bold;
+}
+
+.lab td:nth-child(3) {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.tutorial td:nth-child(3) {
+  color: #2a9d8f;
+  font-weight: bold;
+}
+
+/* Add Left Border Indicator */
+.lecture {
+  border-left: 6px solid #0077b6;
+}
+
+.lab {
+  border-left: 6px solid #ff6b6b;
+}
+
+.tutorial {
+  border-left: 6px solid #2a9d8f;
+}
+
+/* ==============================
+   RESPONSIVE TABLE DESIGN
+   ============================== */
+@media (max-width: 768px) {
+  .course-table thead {
+    display: none;
+  }
+
+  .course-table, .course-table tbody, .course-table tr, .course-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .course-table tr {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .course-table td {
+    text-align: left;
+    padding: 10px 15px;
+    position: relative;
+  }
+
+  .course-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: bold;
+    color: #023e8a;
+  }
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+footer {
+  background: #023e8a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}

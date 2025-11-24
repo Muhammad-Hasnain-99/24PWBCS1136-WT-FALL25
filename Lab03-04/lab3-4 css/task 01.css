@@ -1,0 +1,140 @@
+
+
+/* ---------------------------------
+   BASIC SELECTORS (5 TYPES)
+---------------------------------- */
+
+/* 1. Element Selector */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 20px;
+}
+
+/* 2. Class Selector */
+.highlight {
+  background-color: #e6f7ff;
+  border-left: 4px solid #0099cc;
+  padding: 6px;
+}
+
+/* 3. ID Selector */
+#main-title {
+  color: #004466;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* 4. Universal Selector */
+* {
+  box-sizing: border-box;
+}
+
+/* 5. Grouping Selector */
+h2, h3 {
+  color: #006699;
+}
+
+/* ---------------------------------
+   ATTRIBUTE SELECTORS (3 TYPES)
+---------------------------------- */
+
+/* Select input elements with type="text" */
+input[type="text"] {
+  border: 2px solid #00aaff;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/* Select links that start with https */
+a[href^="https"] {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Select paragraphs with data-role="note" */
+p[data-role="note"] {
+  color: #cc0000;
+  font-style: italic;
+}
+
+/* ---------------------------------
+   COMBINATORS (4 TYPES)
+---------------------------------- */
+
+/* 1. Descendant Selector */
+div p {
+  color: #222222;
+}
+
+/* 2. Child Selector */
+div > span {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* 3. Adjacent Sibling Selector */
+h2 + p {
+  background-color: #d0f0ff;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+/* 4. General Sibling Selector */
+h3 ~ ul {
+  background-color: #e9f5f5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ---------------------------------
+   PSEUDO-CLASSES (5 TYPES)
+---------------------------------- */
+
+/* Hover effect on links */
+a:hover {
+  color: #cc0000;
+  text-decoration: underline;
+}
+
+/* Focus effect on input fields */
+input:focus {
+  background-color: #f0fff0;
+}
+
+/* First child of list */
+ul li:first-child {
+  color: #006600;
+  font-weight: bold;
+}
+
+/* Last child of list */
+ul li:last-child {
+  color: #990000;
+}
+
+/* Third list item */
+ul li:nth-child(3) {
+  background-color: #ffffcc;
+  padding: 3px;
+}
+
+/* ---------------------------------
+   PSEUDO-ELEMENTS (2 TYPES)
+---------------------------------- */
+
+p::before {
+  content: "Note: ";
+  color: #555555;
+  font-weight: bold;
+}
+
+p::after {
+  content: " (Styled with CSS)";
+  color: #999999;
+  font-style: italic;
+}
+

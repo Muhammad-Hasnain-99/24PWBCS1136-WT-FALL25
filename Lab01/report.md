@@ -1,0 +1,2 @@
+# Lab 01 Report
+During this lab, I learned how to use Git to track and manage changes in my project. I created and edited HTML files, learned how to use comments, and practiced adding and removing files. Creating and working with branches helped me understand how to isolate features before merging them. Overall, it was a valuable introduction to version control using Git and GitHub.

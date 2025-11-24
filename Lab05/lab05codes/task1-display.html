@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Display Showcase</title>
+<style>
+body{font-family:Arial;padding:1rem}
+.box{border:1px solid #ccc;margin:1rem 0;padding:1rem}
+.block div{background:#eef;margin:.5rem 0}
+.inline span{display:inline;border:1px solid #aaa;padding:.2rem .4rem;margin:.2rem}
+.inlineblock span{display:inline-block;width:100px;text-align:center;border:1px solid #aaa;margin:.2rem}
+.tablelike{display:table;width:100%;border-collapse:collapse}
+.row{display:table-row}
+.cell{display:table-cell;border:1px solid #ddd;padding:.5rem}
+.hidden{display:none}
+.invisible{visibility:hidden}
+@media(min-width:768px){.inlineblock span{width:150px}}
+</style></head><body>
+<h1>Display Property Showcase</h1>
+<div class="box block">
+  <h3>Block</h3>
+  <div>Block 1</div><div>Block 2</div>
+</div>
+<div class="box inline">
+  <h3>Inline</h3>
+  <p><span>A</span><span>B</span><span>C</span></p>
+</div>
+<div class="box inlineblock">
+  <h3>Inline-Block</h3>
+  <span>Card 1</span><span>Card 2</span><span>Card 3</span>
+</div>
+<div class="box">
+  <h3>Table-like</h3>
+  <div class="tablelike">
+    <div class="row"><div class="cell">A1</div><div class="cell">A2</div></div>
+    <div class="row"><div class="cell">B1</div><div class="cell">B2</div></div>
+  </div>
+</div>
+<div class="box">
+  <h3>Hidden vs Invisible</h3>
+  <p>Visible text</p>
+  <p class="hidden">Hidden (display:none)</p>
+  <p class="invisible">Invisible (visibility:hidden)</p>
+</div>
+</body></html>

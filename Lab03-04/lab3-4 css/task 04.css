@@ -1,0 +1,126 @@
+/* ===============================
+   STYLED IMAGE GALLERY
+   =============================== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background-color: #004466;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+p {
+  margin: 5px 0 20px;
+  font-size: 1rem;
+}
+
+/* Gallery Layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  justify-items: center;
+}
+
+/* Image Card Container */
+.image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Rounded and Circular Styles */
+.rounded {
+  border-radius: 15px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Image Borders and Shadows */
+.bordered {
+  border: 5px solid #0077b6;
+}
+
+.shadowed {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* CSS Filters */
+.filtered {
+  filter: grayscale(70%) brightness(90%);
+  transition: filter 0.4s ease;
+}
+
+/* Hover Effects and Transitions */
+.image-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(110%);
+}
+
+.filtered:hover {
+  filter: grayscale(0%) brightness(105%);
+}
+
+/* Overlay Text Effect */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.overlay p {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.image-card:hover .overlay {
+  height: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: #004466;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+}
